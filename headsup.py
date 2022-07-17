@@ -322,4 +322,4 @@ async def on_message(message):
             await message.channel.send(f"{role.mention}" + mess.content)
             mess.sent = True
 
-client.run('OTk2NTEwNTgwNTQwMTk0OTM2.G7keRl.RvTcGa_D7IC81jA1kA6x0CRElMDHvQb03XeaNA')
+client.run('TOKEN')
