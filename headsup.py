@@ -323,4 +323,4 @@ async def on_message(message):
             mess.sent = True
 
 keep_alive()           
-client.run('TOKEN')
+client.run('OTk2NTEwNTgwNTQwMTk0OTM2.GSGCs7.MlnLAS6R5cQWoCa2paJLhg6R0pT9Eq6hPFzglo')
