@@ -4,11 +4,8 @@ from bs4 import BeautifulSoup
 import requests 
 import pandas as pd 
 from datetime import date
-
 import datetime
 from dateutil import parser
-
-from keepalive import keep_alive
 
 client = discord.Client()
 alert_role_made = False
@@ -191,7 +188,7 @@ async def on_message(message):
     # Test message if bot is working
     if message.content.startswith("!ball hello"):
         role = discord.utils.get(message.author.guild.roles,name = "Heads-Up!Alerts")
-        await message.channel.send(f"Hello! This bot is well and working. Try '!ball info' to see how the bot works. {role.mention}")
+        await message.channel.send(f"Hello! This bot is well and working. Try **!ball info** to see how the bot works. {role.mention}")
 
     # Bot introduction
     if message.content.startswith("!ball info"):
@@ -211,9 +208,9 @@ async def on_message(message):
 
         embedVar = discord.Embed(title="Command List",color=0xf28f1d)
 
-        embedVar.add_field(name = "Notifications",inline=False,value="**!ball notif_on**: get assigned a role so that you can be pinged for season reminders and important dates\n **!ball notif_off**: remove your role so that you don't get notifications for reminders and etc.\n")
+        embedVar.add_field(name = "Notifications",inline=False,value="**!ball notif_on**: get assigned a role so that you can be pinged for season reminders and important dates\n **!ball notif_off**: remove your role so that you don't get notifications for reminders and etc.\n **!ball info**: Get an introduction to what this bot is about!\n")
 
-        embedVar.add_field(name = "NBA Commands",inline=False,value = "Current State of NBA: Summer League Just Ended.\n\n **!ball NBA_today**: get a look at the game schedule for today\n **!ball NBA_east**: look at the eastern conference NBA standings\n**!ball NBA_west**: look at the western conference NBA standings\n **!ball NBA_transaction**: look at a summer of the player transactions over the past 2 days.")
+        embedVar.add_field(name = "NBA Commands",inline=False,value = "Current State of NBA: Summer League Just Ended.\n\n **!ball NBA_today**: get a look at the game schedule for today\n **!ball NBA_east**: look at the eastern conference NBA standings\n**!ball NBA_west**: look at the western conference NBA standings\n **!ball NBA_transactions**: look at a summer of the player transactions over the past 2 days.")
                             
         embedVar.add_field(name = "CEBL Commands",value= "Current State of CEBL: Currently in the Regular Season.\n\n **!ball CEBL_today**: get a look at the game schedule for today\n **!ball CEBL_standings**: look at the CEBL standings\n",inline=False)
                        
@@ -258,7 +255,7 @@ async def on_message(message):
         await message.channel.send(embed=embedVar)
 
     # NBA Transactions
-    if message.content == '!ball NBA_transaction':
+    if message.content == '!ball NBA_transactions':
 
         embedVar = discord.Embed(title="Recent Player Transactions",color=0xf28f1d,description=":basketball: :books: :robot:")
 
@@ -306,7 +303,7 @@ async def on_message(message):
     # Feedback
     if message.content == '!ball feedback':
         embedVar = discord.Embed(title='Heads-Up! Feedback',color=0xf28f1d,description='*It is a contstant quest to try to be better today than you were yesterday and better tomorrow than you were the day before.* - Kobe Bryant')
-        embedVar.add_field(name = "Google Form Below",value='Link',inline=False)
+        embedVar.add_field(name = "Google Form Below",value='https://docs.google.com/forms/d/e/1FAIpQLScyesnw8rWjkz1A0WApvqX5FB1AHowP1JLoMf_qzFmGLAcnoQ/viewform?usp=sf_link',inline=False)
         embedVar.set_image(url='https://64.media.tumblr.com/tumblr_m4l78eb4zE1ruj0bpo1_1280.jpg')
         await message.channel.send(embed=embedVar)
 
@@ -322,5 +319,4 @@ async def on_message(message):
             await message.channel.send(f"{role.mention}" + mess.content)
             mess.sent = True
 
-keep_alive()           
-client.run('OTk2NTEwNTgwNTQwMTk0OTM2.GSGCs7.MlnLAS6R5cQWoCa2paJLhg6R0pT9Eq6hPFzglo')
+client.run('TOKEN')
