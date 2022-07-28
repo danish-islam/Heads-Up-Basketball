@@ -11,6 +11,6 @@ The bot allows users to:
 Take a look at how it appears in your discord server:
 
 ![image](https://user-images.githubusercontent.com/105610097/181619082-95eacb9e-3f9c-4f59-9470-f3a9488b23cd.png)
-<img src="https://user-images.githubusercontent.com/105610097/181619082-95eacb9e-3f9c-4f59-9470-f3a9488b23cd.png" width="250" height="250">
+<img src="https://user-images.githubusercontent.com/105610097/181619082-95eacb9e-3f9c-4f59-9470-f3a9488b23cd.png" height="500">
 
 ![image](https://user-images.githubusercontent.com/105610097/181619274-cbd4cae0-125a-4caa-8c0c-70760eb6c05a.png)
