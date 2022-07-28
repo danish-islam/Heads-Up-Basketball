@@ -7,3 +7,7 @@ The bot allows users to:
   - View league standings that are updated live
   - Get a summary of recent trades and signings within the league
   - Enable notifications for important upcoming dates in the league
+
+![image](https://user-images.githubusercontent.com/105610097/181619082-95eacb9e-3f9c-4f59-9470-f3a9488b23cd.png)
+
+![image](https://user-images.githubusercontent.com/105610097/181619274-cbd4cae0-125a-4caa-8c0c-70760eb6c05a.png)
